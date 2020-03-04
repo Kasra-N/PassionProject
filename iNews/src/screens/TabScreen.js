@@ -35,14 +35,14 @@ export default class TabsScrollableExample extends Component {
           <Right />
         </Header>
         <Tabs renderTabBar={() => <ScrollableTab />}>
+          <Tab heading="Trending">
+            <Trending />
+          </Tab>
           <Tab heading="Science">
             <Science />
           </Tab>
           <Tab heading="Technology">
             <Technology />
-          </Tab>
-          <Tab heading="Trending">
-            <Trending />
           </Tab>
         </Tabs>
       </Container>
