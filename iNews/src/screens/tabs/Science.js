@@ -1,51 +1,49 @@
 import React, { Component } from "react";
-import {
-  Container,
-  Header,
-  Content,
-  List,
-  ListItem,
-  Thumbnail,
-  Text,
-  Left,
-  Body,
-  Right,
-  Button
-} from "native-base";
+import { Container, Content, List, View } from "native-base";
+import { getArticles } from "../../service/news";
+import { Alert, ActivityIndicator, Text } from "react-native";
+import DataItem from "../../component/DataItem";
 
-export default class Science extends Component {
+export default class Trending extends Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.state = {
+      isLoading: true,
+      data: null
+    };
+  }
+
+  componentDidMount() {
+    getArticles('science').then(
+      data => {
+        this.setState({
+          isLoading: false,
+          data: data
+        });
+      },
+      error => {
+        Alert.alert("Error", "Oops! Something went wrong.");
+      }
+    );
+  }
   render() {
+    let view = this.state.isLoading ? (
+      <View>
+        <ActivityIndicator animating={this.state.isLoading} />
+      </View>
+    ) : (
+      <List
+        dataArray={this.state.data}
+        renderRow={item => {
+          return <DataItem data={item} />;
+        }}
+      />
+    );
+
     return (
       <Container>
-        <Content>
-          <List>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail
-                  square
-                  source={{
-                    uri:
-                      "https://www.euractiv.com/wp-content/uploads/sites/2/2014/03/news-default.jpeg"
-                  }}
-                />
-              </Left>
-              <Body>
-                <Text>Science Article</Text>
-                <Text note numberOfLines={2}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nostrum qui natus saepe. Obcaecati culpa id qui corrupti
-                  delectus ullam tempora earum perferendis repudiandae sed,
-                  optio facere omnis consectetur illo aliquam.
-                </Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>View</Text>
-                </Button>
-              </Right>
-            </ListItem>
-          </List>
-        </Content>
+        <Content>{view}</Content>
       </Container>
     );
   }
