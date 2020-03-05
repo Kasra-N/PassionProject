@@ -3,7 +3,7 @@ import { AppLoading } from 'expo';
 import { Container, Text } from 'native-base';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
-import TabScreen from './src/screens/TabScreen';
+import Home from './src/screens/Home';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -29,7 +29,7 @@ export default class App extends React.Component {
 
     return (
       <Container>
-        <TabScreen />
+        <Home />
       </Container>
     );
   }

@@ -15,7 +15,7 @@ import {
 import Science from "./tabs/Science";
 import Technology from "./tabs/Technology";
 import Trending from "./tabs/Trending";
-export default class TabsScrollableExample extends Component {
+export default class Home extends Component {
   render() {
     return (
       <Container>

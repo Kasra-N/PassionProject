@@ -6,9 +6,9 @@ import {
   Thumbnail,
   Body,
   View,
-  Text,
-  Button
+  Text
 } from "native-base";
+import Time from "./time";
 
 export default class DataItem extends Component {
   constructor(props) {
@@ -16,12 +16,18 @@ export default class DataItem extends Component {
     this.data = props.data;
   }
 
+  handlePress = () => {
+    const { url, title } = this.data;
+    this.props.onPress({ url, title });
+  };
+
   render() {
     return (
-      <ListItem thumbnail>
+      <ListItem onPress={this.handlePress} thumbnail>
         <Left>
           <Thumbnail
-            square large
+            style={{ borderRadius: 8, width: 150, height: 100 }}
+            square
             source={{
               uri:
                 this.data.urlToImage != null
@@ -44,13 +50,10 @@ export default class DataItem extends Component {
             }}
           >
             <Text note>{this.data.source.name}</Text>
+            <Time time={this.data.publishedAt} />
           </View>
         </Body>
-        <Right>
-          <Button>
-            <Text>View</Text>
-          </Button>
-        </Right>
+        <Right></Right>
       </ListItem>
     );
   }
