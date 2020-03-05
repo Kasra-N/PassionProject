@@ -46,11 +46,10 @@ export default class Trending extends Component {
   }
   render() {
     let view = this.state.isLoading ? (
-      <View>
-        <ActivityIndicator animating={this.state.isLoading} />
-      </View>
+      <ActivityIndicator animating={this.state.isLoading} />
     ) : (
       <List
+        keyExtractor={item => item.title}
         dataArray={this.state.data}
         renderRow={item => {
           return <DataItem onPress={this.handleItemDataOnPress} data={item} />;
@@ -60,7 +59,7 @@ export default class Trending extends Component {
 
     return (
       <Container>
-        <Content>{view}</Content>
+        {view}
         <Modal
           showModal={this.state.setModalVisible}
           articleData={this.state.modalArticleData}

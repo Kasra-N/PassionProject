@@ -32,7 +32,7 @@ export default class Science extends Component {
   };
 
   componentDidMount() {
-    getArticles('science').then(
+    getArticles("science").then(
       data => {
         this.setState({
           isLoading: false,
@@ -42,16 +42,14 @@ export default class Science extends Component {
       error => {
         Alert.alert("Error", "Oops! Something went wrong.");
       }
-      
     );
   }
   render() {
     let view = this.state.isLoading ? (
-      <View>
-        <ActivityIndicator animating={this.state.isLoading} />
-      </View>
+      <ActivityIndicator animating={this.state.isLoading} />
     ) : (
       <List
+        keyExtractor={item => item.title}
         dataArray={this.state.data}
         renderRow={item => {
           return <DataItem onPress={this.handleItemDataOnPress} data={item} />;
@@ -61,7 +59,7 @@ export default class Science extends Component {
 
     return (
       <Container>
-        <Content>{view}</Content>
+        {view}
         <Modal
           showModal={this.state.setModalVisible}
           articleData={this.state.modalArticleData}

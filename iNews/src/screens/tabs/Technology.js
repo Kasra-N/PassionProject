@@ -47,12 +47,10 @@ export default class Technology extends Component {
 
   render() {
     let view = this.state.isLoading ? (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <ActivityIndicator animating={this.state.isLoading} color="#00f0ff" />
-        <Text style={{ marginTop: 10 }} children="Please Wait.." />
-      </View>
+      <ActivityIndicator animating={this.state.isLoading} />
     ) : (
       <List
+        keyExtractor={item => item.title}
         dataArray={this.state.data}
         renderRow={item => {
           return <DataItem onPress={this.handleItemDataOnPress} data={item} />;
@@ -62,7 +60,7 @@ export default class Technology extends Component {
 
     return (
       <Container>
-        <Content>{view}</Content>
+        {view}
         <Modal
           showModal={this.state.setModalVisible}
           articleData={this.state.modalArticleData}
