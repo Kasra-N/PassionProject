@@ -6,8 +6,8 @@ import DataItem from "../../component/dataItem";
 import Modal from "../../component/modal";
 
 export default class Technology extends Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
 
     this.state = {
       isLoading: true,
@@ -32,7 +32,7 @@ export default class Technology extends Component {
   };
 
   componentDidMount() {
-    getArticles("technology").then(
+    getArticles('technology').then(
       data => {
         this.setState({
           isLoading: false,
@@ -40,11 +40,10 @@ export default class Technology extends Component {
         });
       },
       error => {
-        Alert.alert("Error", "Something went wrong!");
+        Alert.alert("Error", "Oops! Something went wrong.");
       }
     );
   }
-
   render() {
     let view = this.state.isLoading ? (
       <ActivityIndicator animating={this.state.isLoading} />

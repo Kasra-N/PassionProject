@@ -32,7 +32,7 @@ export default class Science extends Component {
   };
 
   componentDidMount() {
-    getArticles("science").then(
+    getArticles('science').then(
       data => {
         this.setState({
           isLoading: false,
