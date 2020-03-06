@@ -28,7 +28,7 @@ export default class Home extends Component {
           <Left />
           <Body>
             <Title>
-              <Text style={{ fontSize: 30, color: "white", marginLeft: 210 }}>
+              <Text style={{ fontSize: 30, color: "white"}}>
                 {" "}
                 iN
                 <Icon
