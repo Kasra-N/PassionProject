@@ -18,6 +18,7 @@ import Trending from "./tabs/Trending";
 import Sports from "./tabs/Sports";
 import Health from "./tabs/Health";
 import Business from "./tabs/Business";
+
 export default class Home extends Component {
   render() {
     return (
