@@ -6,7 +6,7 @@
 
 ### Screenshots:
 
-![img](images/1.jpg)
-![img](images/2.jpg)
-![img](images/3.jpg)
-![img](images/4.jpg)
+![img](Images/1.jpg)
+![img](Images/2.jpg)
+![img](Images/3.jpg)
+![img](Images/4.jpg)
