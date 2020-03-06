@@ -6,7 +6,7 @@
 
 ### Screenshots:
 
-![img](Images/1.jpg = 800x400)
+![img](Images/1.jpg)
 ![img](Images/2.jpg)
 ![img](Images/3.jpg)
 ![img](Images/4.jpg)
