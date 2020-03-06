@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  ListItem,
-  Left,
-  Right,
-  Thumbnail,
-  Body,
-  View,
-  Text
-} from "native-base";
+import { ListItem, Left, Thumbnail, Body, View, Text } from "native-base";
 import Time from "./time";
 
 export default class DataItem extends Component {
@@ -23,10 +15,10 @@ export default class DataItem extends Component {
 
   render() {
     return (
-      <ListItem onPress={this.handlePress} thumbnail>
+      <ListItem key={this.data.url} onPress={this.handlePress} thumbnail>
         <Left>
           <Thumbnail
-            style={{ borderRadius: 8, width: 150, height: 100 }}
+            style={{ borderRadius: 8, width: 160, height: 120 }}
             square
             source={{
               uri:
@@ -37,7 +29,7 @@ export default class DataItem extends Component {
           />
         </Left>
         <Body>
-          <Text numberOfLines={2}>{this.data.title}</Text>
+          <Text numberOfLines={3}>{this.data.title}</Text>
           <Text note numberOfLines={2}>
             {this.data.description}
           </Text>
@@ -53,7 +45,6 @@ export default class DataItem extends Component {
             <Time time={this.data.publishedAt} />
           </View>
         </Body>
-        <Right></Right>
       </ListItem>
     );
   }
