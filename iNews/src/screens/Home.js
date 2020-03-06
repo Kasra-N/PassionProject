@@ -15,6 +15,9 @@ import {
 import Science from "./tabs/Science";
 import Technology from "./tabs/Technology";
 import Trending from "./tabs/Trending";
+import Sports from "./tabs/Sports";
+import Health from "./tabs/Health";
+import Business from "./tabs/Business";
 export default class Home extends Component {
   render() {
     return (
@@ -24,12 +27,16 @@ export default class Home extends Component {
           <Left />
           <Body>
             <Title>
-              <Icon
-                style={{ color: "white", fontSize: 22 }}
-                type="FontAwesome"
-                name="globe"
-              />
-              iNews
+              <Text style={{ fontSize: 30, color: "white", marginLeft: 210 }}>
+                {" "}
+                iN
+                <Icon
+                  style={{ color: "white", fontSize: 22 }}
+                  type="FontAwesome"
+                  name="globe"
+                />
+                ws
+              </Text>
             </Title>
           </Body>
           <Right />
@@ -43,6 +50,15 @@ export default class Home extends Component {
           </Tab>
           <Tab heading="Technology">
             <Technology />
+          </Tab>
+          <Tab heading="Sports">
+            <Sports />
+          </Tab>
+          <Tab heading="Health">
+            <Health />
+          </Tab>
+          <Tab heading="Business">
+            <Business />
           </Tab>
         </Tabs>
       </Container>
