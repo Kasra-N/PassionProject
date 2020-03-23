@@ -4,7 +4,7 @@
 ### Built on React-Native, News API, and React modules such as Moment for time management, and Native-Base for a smooth user interface
 
 ## Walthrough Video link:
-https://drive.google.com/file/d/1Sz8Gp4ycf8cRGFVfGoNf3PD09XZ9HQiR/view?usp=sharing
+https://drive.google.com/open?id=1Sz8Gp4ycf8cRGFVfGoNf3PD09XZ9HQiR
 
 ### Screenshots:
 
