@@ -17,4 +17,5 @@
 
 ### On touching the share button
 You can share the article with your friends using OS's share system. The recipient will recieve a custom message that shows them the article and message ends with "Shared via INews"
+
 ![img](Images/4.jpg)
