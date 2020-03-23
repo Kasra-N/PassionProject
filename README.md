@@ -21,3 +21,17 @@ https://drive.google.com/open?id=1Sz8Gp4ycf8cRGFVfGoNf3PD09XZ9HQiR
 You can share the article with your friends using OS's share system. The recipient will recieve a custom message that shows them the article and message ends with "Shared via INews"
 
 ![img](Images/4.jpg)
+
+# Requirements
+* Requirements
+* NodeJS
+* Expo
+
+# Installation Guide
+
+1. Install dependencies
+git clone https://github.com/Kasra-N/PassionProject.git
+cd iNews
+npm install / yarn install
+npm start / yarn start
+
