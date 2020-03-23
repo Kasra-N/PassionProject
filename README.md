@@ -8,17 +8,13 @@ https://drive.google.com/open?id=1Sz8Gp4ycf8cRGFVfGoNf3PD09XZ9HQiR
 
 ### Screenshots:
 
-### Tab 1 ### Tab 2 ### On touching article ### On touching the share button
-![img](Images/1.jpg) ![img](Images/2.jpg) ![img](Images/3.jpg) ![img](Images/4.jpg)
+### Tab 1 ### Tab 2 
+![img](Images/1.jpg) ![img](Images/2.jpg) 
 
+### On touching article ### On touching the share button
+![img](Images/3.jpg) ![img](Images/4.jpg)
 
-
-
-
-
-
-
-You can share the article with your friends using OS's share system. The recipient will recieve a custom message that shows them the article and message ends with "Shared via INews"
+You can now share any article with your friends using OS's share system. The recipient will recieve a custom message that shows them the article and message ends with "Shared via INews"
 
 
 
