@@ -29,9 +29,8 @@ You can share the article with your friends using OS's share system. The recipie
 
 # Installation Guide
 
-1. Install dependencies
-git clone https://github.com/Kasra-N/PassionProject.git
-cd iNews
-npm install / yarn install
-npm start / yarn start
+1. git clone https://github.com/Kasra-N/PassionProject.git
+2. cd iNews
+3. npm install / yarn install
+4. npm start / yarn start
 
